@@ -11,6 +11,7 @@ float LuasLingkarang(float r) {
 float LuasSegitiga(float a, float t) {
     return 0.5 * a * t;
 }
+
 int main() {
     float panjang, lebar, jejari, alas, tinggi;
     int pilihan;
@@ -28,3 +29,35 @@ int main() {
         cout << "4. Exit" << endl;
         cout << "\nPilihan 1/2/3/4 : " << endl;
         cin >> pilihan;
+
+        switch (pilihan)
+        {
+        case 1:
+            cout << "Masukan Panjang = ";
+            cin >> panjang;
+            cout << "Masukan Lebar = ";
+            cin >> lebar;
+            cout << "\nLuas Persegi Panjang = " << LuasPersegipanjang(panjang, lebar);
+            break;
+        case 2:
+            cout << "Masukan Jejari = ";
+            cin >> jejari;
+            cout << "\nLuas Lingkaran = " << LuasLingkarang(jejari);
+            break;
+        case 3:
+            cout << "Masukan Alas = ";
+            cin >> alas;
+            cout << "Masukan Tinggi = ";
+            cin >> tinggi;
+            cout << "\nLuas Segitiga = " << LuasSegitiga(alas, tinggi);
+            break;
+        case 4:
+            menu = false;
+            break;
+        default:
+            cout << "Pilihan Salah !";
+            break;
+        }
+    }
+    // } while (pilihan != 4);
+}
